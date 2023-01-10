@@ -22,7 +22,7 @@ public static class SelectionSort
                     min = j;
                 }
             }
-
+    
             (array[min], array[i]) = (array[i], array[min]);
         }
     }
@@ -32,12 +32,9 @@ public static class SelectionSort
         for (int i = 0; i < arr.Length; i++)
         {
             int min = i;
-            for (int j = i+1; j < arr.Length; j++)
+            for (int j = i; j < arr.Length; j++)
             {
-                if (arr[j] < arr[min])
-                {
-                    min = j;
-                }
+                if (arr[j] < min) min = j;
             }
 
             (arr[i], arr[min]) = (arr[min], arr[i]);

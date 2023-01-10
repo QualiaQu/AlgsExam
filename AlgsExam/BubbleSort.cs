@@ -5,15 +5,15 @@
 // Обход массива повторяется до тех пор, пока массив не будет упорядочен.
 public static class BubbleSort
 {
-    public static void Sort(int[] array)
+    public static void Sort(int[] arr)
     {
-        for (int i = 0; i < array.Length; i++)
+        for (int i = 0; i < arr.Length; i++)
         {
-            for (int j = i+1; j < array.Length; j++)
+            for (int j = 0; j < arr.Length - 1; j++)
             {
-                if (array[i] > array[j])
+                if (arr[j] > arr[j + 1])
                 {
-                    (array[i], array[j]) = (array[j], array[i]);
+                    (arr[j + 1], arr[j]) = (arr[j], arr[j + 1]);
                 }
             }
         }
